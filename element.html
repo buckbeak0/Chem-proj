@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Element Properties</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        .element-card {
+            background-color: #fff;
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%; /* Set width to 90% to prevent input from going out of the box */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        h3 {
+            color: #007bff;
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .electron-orbit {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #007bff;
+            border-radius: 50%;
+            position: relative;
+            margin: 0 auto;
+            animation: orbit 5s linear infinite;
+        }
+
+        .electron {
+            width: 10px;
+            height: 10px;
+            background-color: #007bff;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @keyframes orbit {
+            0% {
+                transform: translateX(-50%) translateY(-90px) rotate(0deg);
+            }
+            100% {
+                transform: translateX(-50%) translateY(-90px) rotate(360deg);
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="element-card">
+        <h2>Element Properties</h2>
+        <p>Name: <span style="color: #007bff;">{{ name }}</span></p>
+        <p>Symbol: <span style="color: #007bff;">{{ symbol }}</span></p>
+        <p>Atomic Mass: <span style="color: #007bff;">{{ atomic_mass }} g/mol</span></p>
+        <p>Atomic Number: <span style="color: #007bff;">{{ atomic_number }}</span></p>
+        <h3>Wikipedia Summary:</h3>
+        <p>{{ summary }}</p>
+    </div>
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>
